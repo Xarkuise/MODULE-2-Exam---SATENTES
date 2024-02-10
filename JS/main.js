@@ -56,11 +56,42 @@ const bedMaterial = new THREE.MeshPhongMaterial({ color: 0x5C2C26 });
 const bed = new THREE.Mesh(bedGeometry, bedMaterial);
 scene.add(bed);
 
+//Head Board in Bed
+const headBoardBedGeometry = new THREE.BoxGeometry(50, 80, 5);
+const headBoardBedMaterial = new THREE.MeshPhongMaterial({ color: 0x5C2C26 });
+const headBoardBed = new THREE.Mesh(headBoardBedGeometry, headBoardBedMaterial);
+scene.add(headBoardBed);
+
+//Bed leg
+const bedLegGeometry = new THREE.BoxGeometry(50, 38, 5);
+const bedLegMaterial = new THREE.MeshPhongMaterial({ color: 0x5C2C26 });
+const bedLeg = new THREE.Mesh(bedLegGeometry, bedLegMaterial);
+scene.add(bedLeg);
+
 //Bed Sheet
-const bedSheetGeometry = new THREE.BoxGeometry(45, 25, 73);
+const bedSheetGeometry = new THREE.BoxGeometry(45, 20, 70);
 const bedSheetMaterial = new THREE.MeshPhongMaterial({ color: 0xFFFFFF });
 const bedSheet = new THREE.Mesh(bedSheetGeometry, bedSheetMaterial);
 scene.add(bedSheet);
+
+
+//Small shelf
+const shelfGeometry = new THREE.BoxGeometry(45, 40, 36);
+const shelfMaterial = new THREE.MeshPhongMaterial({ color: 0x523e2a });
+const shelf = new THREE.Mesh(shelfGeometry, shelfMaterial);
+scene.add(shelf);
+
+//Inside of the Shelf
+const cabGeometry = new THREE.BoxGeometry(40, 26, 22);
+const cabMaterial = new THREE.MeshPhongMaterial({ color: 0x765742});
+const cab = new THREE.Mesh(cabGeometry, cabMaterial);
+scene.add(cab);
+
+//knob
+const knobGeometry = new THREE.SphereGeometry( 2, 64, 34 )
+const knobMaterial = new THREE.MeshPhongMaterial({ color: 0xE1C16E});
+const knob = new THREE.Mesh(knobGeometry, knobMaterial);
+scene.add(knob);
 
 //table
 const tableGeometry = new THREE.BoxGeometry(40, 40, 24);
@@ -158,12 +189,35 @@ function animate() {
       secondWindowGlass.rotation.y = -Math.PI / 2;
       
       //Bed position
-      bed.position.y =  12;
+      bed.position.y =  16;
       bed.position.x =  -72;
       bed.position.z =  -20;
 
+      //Head Board for bed
+      headBoardBed.position.y =  12;
+      headBoardBed.position.x =  -72;
+      headBoardBed.position.z =  -59;
+
+      //Leg of the Bed 
+      bedLeg.position.y =  12;
+      bedLeg.position.x =  -72;
+      bedLeg.position.z =  19;
+
+      //Shelf position
+      shelf.position.y =  12;
+      shelf.position.x =  62;
+      shelf.position.z =  -80;
+
+      cab.position.y =  17;
+      cab.position.x =  62;
+      cab.position.z =  -70;
+
+      knob.position.y =  17;
+      knob.position.x =  62;
+      knob.position.z =  -54;
+
       //Bed sheet position
-      bedSheet.position.y =  12;
+      bedSheet.position.y =  18;
       bedSheet.position.x =  -72;
       bedSheet.position.z =  -20;
 
