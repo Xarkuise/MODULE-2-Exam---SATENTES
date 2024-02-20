@@ -207,7 +207,7 @@ function animate() {
       shelf.position.y =  12;
       shelf.position.x =  62;
       shelf.position.z =  -80;
-
+    
       cab.position.y =  17;
       cab.position.x =  62;
       cab.position.z =  -70;
